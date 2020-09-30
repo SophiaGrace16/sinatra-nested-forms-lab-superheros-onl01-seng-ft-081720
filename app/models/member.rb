@@ -1,17 +1,17 @@
 class Member
-    attr_accessor :name, :power, :bio
+    attr_accessor :bio, :name, :power
 
-    @@members=[]
+    @@all=[]
 
     def initialize(args)
+        @bio = args[:bio]
         @name = args[:name]
         @power = args[:power]
-        @bio = args[:bio]
-        @@members << self
+        @@all << self
     end
 
     def self.all
-        @@members
+        @@all
     end
 
 end
